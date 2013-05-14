@@ -2,11 +2,14 @@
 <manifest>
 
   <remote  name="aosp"
-      fetch="https://android-review.googlesource.com/"
+           fetch="https://android-review.googlesource.com/"
            review="https://android-review.googlesource.com/" />
+  <remote  name="github"
+           fetch="https://github.com/CyanogenMod/" />
   <default revision="master"
            remote="aosp"
            sync-j="4" />
+
 
   <project path="build" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -41,6 +44,7 @@
   <project path="device/samsung_slsi/arndale" name="device/samsung_slsi/arndale" groups="device" />
   <project path="device/ti/panda" name="device/ti/panda" groups="device" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" />
+  <project path="external/busybox" name="CyanogenMod/android_external_busybox" remote="github" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
   <project path="external/android-clat" name="platform/external/android-clat" />
   <project path="external/android-mock" name="platform/external/android-mock" />
